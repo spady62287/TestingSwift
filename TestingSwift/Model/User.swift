@@ -24,7 +24,12 @@ struct User {
             let center = NotificationCenter.default
             center.post(name: User.upgradeNotification, object: nil)
         }
-        
+    }
+    
+    // Return a Random Age for User
+    func randomAge() -> Int {
+        // Range the age
+        return Int.random(in: 0...120)
     }
 }
 
