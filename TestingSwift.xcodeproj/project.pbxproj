@@ -15,6 +15,10 @@
 		995306CA25CB0050006AE71F /* TestingSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306C925CB0050006AE71F /* TestingSwiftUITests.swift */; };
 		995306DC25CB080D006AE71F /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306DB25CB080D006AE71F /* Converter.swift */; };
 		995306E525CB08A4006AE71F /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306E425CB08A4006AE71F /* ConverterTests.swift */; };
+		995306F925CB0CA5006AE71F /* AsynchronousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306F825CB0CA5006AE71F /* AsynchronousTests.swift */; };
+		9953070525CB0CD1006AE71F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953070425CB0CD1006AE71F /* Game.swift */; };
+		9953070B25CB0D5A006AE71F /* PrimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953070A25CB0D5A006AE71F /* PrimeCalculator.swift */; };
+		9953071125CB0DA2006AE71F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953071025CB0DA2006AE71F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,13 @@
 			remoteInfo = TestingSwift;
 		};
 		995306C625CB0050006AE71F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 995306A125CB004F006AE71F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 995306A825CB004F006AE71F;
+			remoteInfo = TestingSwift;
+		};
+		995306FB25CB0CA5006AE71F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 995306A125CB004F006AE71F /* Project object */;
 			proxyType = 1;
@@ -49,6 +60,12 @@
 		995306CB25CB0050006AE71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		995306DB25CB080D006AE71F /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		995306E425CB08A4006AE71F /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
+		995306F625CB0CA4006AE71F /* AsynchronousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsynchronousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		995306F825CB0CA5006AE71F /* AsynchronousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousTests.swift; sourceTree = "<group>"; };
+		995306FA25CB0CA5006AE71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9953070425CB0CD1006AE71F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		9953070A25CB0D5A006AE71F /* PrimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeCalculator.swift; sourceTree = "<group>"; };
+		9953071025CB0DA2006AE71F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +90,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		995306F325CB0CA4006AE71F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +106,7 @@
 				995306AB25CB004F006AE71F /* TestingSwift */,
 				995306BD25CB0050006AE71F /* TestingSwiftTests */,
 				995306C825CB0050006AE71F /* TestingSwiftUITests */,
+				995306F725CB0CA4006AE71F /* AsynchronousTests */,
 				995306AA25CB004F006AE71F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +117,7 @@
 				995306A925CB004F006AE71F /* TestingSwift.app */,
 				995306BA25CB0050006AE71F /* TestingSwiftTests.xctest */,
 				995306C525CB0050006AE71F /* TestingSwiftUITests.xctest */,
+				995306F625CB0CA4006AE71F /* AsynchronousTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				995306DB25CB080D006AE71F /* Converter.swift */,
+				9953070425CB0CD1006AE71F /* Game.swift */,
+				9953070A25CB0D5A006AE71F /* PrimeCalculator.swift */,
+				9953071025CB0DA2006AE71F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +179,15 @@
 				995306E425CB08A4006AE71F /* ConverterTests.swift */,
 			);
 			path = ConverterTests;
+			sourceTree = "<group>";
+		};
+		995306F725CB0CA4006AE71F /* AsynchronousTests */ = {
+			isa = PBXGroup;
+			children = (
+				995306F825CB0CA5006AE71F /* AsynchronousTests.swift */,
+				995306FA25CB0CA5006AE71F /* Info.plist */,
+			);
+			path = AsynchronousTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +246,24 @@
 			productReference = 995306C525CB0050006AE71F /* TestingSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		995306F525CB0CA4006AE71F /* AsynchronousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 995306FF25CB0CA5006AE71F /* Build configuration list for PBXNativeTarget "AsynchronousTests" */;
+			buildPhases = (
+				995306F225CB0CA4006AE71F /* Sources */,
+				995306F325CB0CA4006AE71F /* Frameworks */,
+				995306F425CB0CA4006AE71F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				995306FC25CB0CA5006AE71F /* PBXTargetDependency */,
+			);
+			name = AsynchronousTests;
+			productName = AsynchronousTests;
+			productReference = 995306F625CB0CA4006AE71F /* AsynchronousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -225,6 +281,10 @@
 						TestTargetID = 995306A825CB004F006AE71F;
 					};
 					995306C425CB0050006AE71F = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 995306A825CB004F006AE71F;
+					};
+					995306F525CB0CA4006AE71F = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 995306A825CB004F006AE71F;
 					};
@@ -246,6 +306,7 @@
 				995306A825CB004F006AE71F /* TestingSwift */,
 				995306B925CB0050006AE71F /* TestingSwiftTests */,
 				995306C425CB0050006AE71F /* TestingSwiftUITests */,
+				995306F525CB0CA4006AE71F /* AsynchronousTests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,6 +335,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		995306F425CB0CA4006AE71F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -283,7 +351,10 @@
 			files = (
 				995306AF25CB004F006AE71F /* ContentView.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
+				9953071125CB0DA2006AE71F /* User.swift in Sources */,
+				9953070B25CB0D5A006AE71F /* PrimeCalculator.swift in Sources */,
 				995306AD25CB004F006AE71F /* TestingSwiftApp.swift in Sources */,
+				9953070525CB0CD1006AE71F /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +375,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		995306F225CB0CA4006AE71F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995306F925CB0CA5006AE71F /* AsynchronousTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -316,6 +395,11 @@
 			isa = PBXTargetDependency;
 			target = 995306A825CB004F006AE71F /* TestingSwift */;
 			targetProxy = 995306C625CB0050006AE71F /* PBXContainerItemProxy */;
+		};
+		995306FC25CB0CA5006AE71F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 995306A825CB004F006AE71F /* TestingSwift */;
+			targetProxy = 995306FB25CB0CA5006AE71F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -558,6 +642,44 @@
 			};
 			name = Release;
 		};
+		995306FD25CB0CA5006AE71F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsynchronousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielSpady.AsynchronousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestingSwift.app/TestingSwift";
+			};
+			name = Debug;
+		};
+		995306FE25CB0CA5006AE71F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsynchronousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanielSpady.AsynchronousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestingSwift.app/TestingSwift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +715,15 @@
 			buildConfigurations = (
 				995306D525CB0050006AE71F /* Debug */,
 				995306D625CB0050006AE71F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		995306FF25CB0CA5006AE71F /* Build configuration list for PBXNativeTarget "AsynchronousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995306FD25CB0CA5006AE71F /* Debug */,
+				995306FE25CB0CA5006AE71F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
