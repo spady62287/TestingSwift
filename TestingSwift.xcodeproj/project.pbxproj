@@ -22,6 +22,7 @@
 		9953071F25CB1085006AE71F /* ThrowingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953071E25CB1085006AE71F /* ThrowingTests.swift */; };
 		9953073125CB2E4B006AE71F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953073025CB2E4B006AE71F /* Player.swift */; };
 		9953073825CB2E90006AE71F /* AssertArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953073725CB2E90006AE71F /* AssertArrayTest.swift */; };
+		99531CE425CB4F0E0054AA05 /* CustomAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99531CE325CB4F0E0054AA05 /* CustomAssertions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		9953071E25CB1085006AE71F /* ThrowingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowingTests.swift; sourceTree = "<group>"; };
 		9953073025CB2E4B006AE71F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9953073725CB2E90006AE71F /* AssertArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertArrayTest.swift; sourceTree = "<group>"; };
+		99531CE325CB4F0E0054AA05 /* CustomAssertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAssertions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		995306BD25CB0050006AE71F /* TestingSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				99531CE225CB4EE90054AA05 /* CustomAssertions */,
 				9953073625CB2E67006AE71F /* AssertArrayTests */,
 				9953071D25CB1067006AE71F /* ThrowingTests */,
 				995306E325CB0875006AE71F /* ConverterTests */,
@@ -213,6 +216,14 @@
 				9953073725CB2E90006AE71F /* AssertArrayTest.swift */,
 			);
 			path = AssertArrayTests;
+			sourceTree = "<group>";
+		};
+		99531CE225CB4EE90054AA05 /* CustomAssertions */ = {
+			isa = PBXGroup;
+			children = (
+				99531CE325CB4F0E0054AA05 /* CustomAssertions.swift */,
+			);
+			path = CustomAssertions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				995306E525CB08A4006AE71F /* ConverterTests.swift in Sources */,
 				9953073825CB2E90006AE71F /* AssertArrayTest.swift in Sources */,
 				995306BF25CB0050006AE71F /* TestingSwiftTests.swift in Sources */,
+				99531CE425CB4F0E0054AA05 /* CustomAssertions.swift in Sources */,
 				9953071F25CB1085006AE71F /* ThrowingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

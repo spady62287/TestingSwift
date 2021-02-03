@@ -14,4 +14,11 @@ struct Converter {
         return celsius.value
         //return (fahrenheit - 32) * 5 / 9
     }
+    
+    // Method that returns a tuple
+    func divisionRemainder(of number: Int, dividedBy: Int) -> (quotient: Int, remainder: Int) {
+        let quotient = number / dividedBy
+        let remainder = number % dividedBy
+        return (quotient, remainder)
+    }
 }
