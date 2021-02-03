@@ -13,6 +13,8 @@
 		995306B425CB0050006AE71F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995306B325CB0050006AE71F /* Preview Assets.xcassets */; };
 		995306BF25CB0050006AE71F /* TestingSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306BE25CB0050006AE71F /* TestingSwiftTests.swift */; };
 		995306CA25CB0050006AE71F /* TestingSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306C925CB0050006AE71F /* TestingSwiftUITests.swift */; };
+		995306DC25CB080D006AE71F /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306DB25CB080D006AE71F /* Converter.swift */; };
+		995306E525CB08A4006AE71F /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306E425CB08A4006AE71F /* ConverterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		995306C525CB0050006AE71F /* TestingSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		995306C925CB0050006AE71F /* TestingSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSwiftUITests.swift; sourceTree = "<group>"; };
 		995306CB25CB0050006AE71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		995306DB25CB080D006AE71F /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		995306E425CB08A4006AE71F /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		995306AB25CB004F006AE71F /* TestingSwift */ = {
 			isa = PBXGroup;
 			children = (
+				995306DA25CB07F0006AE71F /* Model */,
 				995306AC25CB004F006AE71F /* TestingSwiftApp.swift */,
 				995306AE25CB004F006AE71F /* ContentView.swift */,
 				995306B025CB0050006AE71F /* Assets.xcassets */,
@@ -115,6 +120,7 @@
 		995306BD25CB0050006AE71F /* TestingSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				995306E325CB0875006AE71F /* ConverterTests */,
 				995306BE25CB0050006AE71F /* TestingSwiftTests.swift */,
 				995306C025CB0050006AE71F /* Info.plist */,
 			);
@@ -128,6 +134,22 @@
 				995306CB25CB0050006AE71F /* Info.plist */,
 			);
 			path = TestingSwiftUITests;
+			sourceTree = "<group>";
+		};
+		995306DA25CB07F0006AE71F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				995306DB25CB080D006AE71F /* Converter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		995306E325CB0875006AE71F /* ConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				995306E425CB08A4006AE71F /* ConverterTests.swift */,
+			);
+			path = ConverterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				995306AF25CB004F006AE71F /* ContentView.swift in Sources */,
+				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
 				995306AD25CB004F006AE71F /* TestingSwiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995306E525CB08A4006AE71F /* ConverterTests.swift in Sources */,
 				995306BF25CB0050006AE71F /* TestingSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
