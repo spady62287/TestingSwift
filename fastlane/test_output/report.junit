@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='TestingRubyUITests.xctest' tests='4' failures='0'>
+  <testsuite name='TestingRubyTests.TestingRubyTests' tests='2' failures='0'>
+    <testcase classname='TestingRubyTests.TestingRubyTests' name='testExample' time='0.002'/>
+    <testcase classname='TestingRubyTests.TestingRubyTests' name='testPerformanceExample' time='0.293'/>
+  </testsuite>
+  <testsuite name='TestingRubyUITests.TestingRubyUITests' tests='2' failures='0'>
+    <testcase classname='TestingRubyUITests.TestingRubyUITests' name='testExample' time='1.551'/>
+    <testcase classname='TestingRubyUITests.TestingRubyUITests' name='testLaunchPerformance' time='14.305'/>
+  </testsuite>
+</testsuites>
