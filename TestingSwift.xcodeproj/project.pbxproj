@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9912432425D04ED2009ECB70 /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912432325D04ED2009ECB70 /* Cake.swift */; };
+		9912432B25D04F76009ECB70 /* MutationTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912432A25D04F76009ECB70 /* MutationTesting.swift */; };
 		995306AD25CB004F006AE71F /* TestingSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306AC25CB004F006AE71F /* TestingSwiftApp.swift */; };
 		995306AF25CB004F006AE71F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306AE25CB004F006AE71F /* ContentView.swift */; };
 		995306B125CB0050006AE71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995306B025CB0050006AE71F /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9912432325D04ED2009ECB70 /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
+		9912432A25D04F76009ECB70 /* MutationTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutationTesting.swift; sourceTree = "<group>"; };
 		995306A925CB004F006AE71F /* TestingSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995306AC25CB004F006AE71F /* TestingSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSwiftApp.swift; sourceTree = "<group>"; };
 		995306AE25CB004F006AE71F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9912432925D04F52009ECB70 /* MutationTesting */ = {
+			isa = PBXGroup;
+			children = (
+				9912432A25D04F76009ECB70 /* MutationTesting.swift */,
+			);
+			path = MutationTesting;
+			sourceTree = "<group>";
+		};
 		995306A025CB004F006AE71F = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,7 @@
 		995306BD25CB0050006AE71F /* TestingSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				9912432925D04F52009ECB70 /* MutationTesting */,
 				9953F65C25CC5C3E00650505 /* CodeCoverage */,
 				99531CF525CB59880054AA05 /* PerformanceTesting */,
 				99531CE225CB4EE90054AA05 /* CustomAssertions */,
@@ -190,6 +203,7 @@
 				9953071025CB0DA2006AE71F /* User.swift */,
 				9953073025CB2E4B006AE71F /* Player.swift */,
 				9953F65625CC5B2F00650505 /* House.swift */,
+				9912432325D04ED2009ECB70 /* Cake.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				995306AF25CB004F006AE71F /* ContentView.swift in Sources */,
+				9912432425D04ED2009ECB70 /* Cake.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
 				9953F65725CC5B2F00650505 /* House.swift in Sources */,
 				9953071125CB0DA2006AE71F /* User.swift in Sources */,
@@ -432,6 +447,7 @@
 				99531CE425CB4F0E0054AA05 /* CustomAssertions.swift in Sources */,
 				9953F65E25CC5C5800650505 /* CodeCoverage.swift in Sources */,
 				9953071F25CB1085006AE71F /* ThrowingTests.swift in Sources */,
+				9912432B25D04F76009ECB70 /* MutationTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
