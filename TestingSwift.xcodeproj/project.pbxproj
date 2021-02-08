@@ -30,6 +30,8 @@
 		9953F65E25CC5C5800650505 /* CodeCoverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953F65D25CC5C5800650505 /* CodeCoverage.swift */; };
 		9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C45B25D193A4006507BE /* AnimalTableView.swift */; };
 		9959C46D25D19943006507BE /* TestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C46C25D19943006507BE /* TestDouble.swift */; };
+		9959C48125D19F5B006507BE /* PurchaseImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C48025D19F5B006507BE /* PurchaseImplementations.swift */; };
+		9959C48B25D1A108006507BE /* PurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C48A25D1A108006507BE /* PurchaseProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		9953F65D25CC5C5800650505 /* CodeCoverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverage.swift; sourceTree = "<group>"; };
 		9959C45B25D193A4006507BE /* AnimalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableView.swift; sourceTree = "<group>"; };
 		9959C46C25D19943006507BE /* TestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDouble.swift; sourceTree = "<group>"; };
+		9959C48025D19F5B006507BE /* PurchaseImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseImplementations.swift; sourceTree = "<group>"; };
+		9959C48A25D1A108006507BE /* PurchaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		995306AB25CB004F006AE71F /* TestingSwift */ = {
 			isa = PBXGroup;
 			children = (
+				9959C47E25D19EF6006507BE /* DependencyInjection */,
 				9959C45A25D19392006507BE /* Stub */,
 				995306DA25CB07F0006AE71F /* Model */,
 				995306AC25CB004F006AE71F /* TestingSwiftApp.swift */,
@@ -285,6 +290,23 @@
 				9959C46C25D19943006507BE /* TestDouble.swift */,
 			);
 			path = TestDouble;
+			sourceTree = "<group>";
+		};
+		9959C47E25D19EF6006507BE /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				9959C47F25D19F06006507BE /* Interfaces */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		9959C47F25D19F06006507BE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				9959C48025D19F5B006507BE /* PurchaseImplementations.swift */,
+				9959C48A25D1A108006507BE /* PurchaseProtocol.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +470,7 @@
 			files = (
 				995306AF25CB004F006AE71F /* ContentView.swift in Sources */,
 				9912432425D04ED2009ECB70 /* Cake.swift in Sources */,
+				9959C48125D19F5B006507BE /* PurchaseImplementations.swift in Sources */,
 				9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
 				9953F65725CC5B2F00650505 /* House.swift in Sources */,
@@ -455,6 +478,7 @@
 				9953070B25CB0D5A006AE71F /* PrimeCalculator.swift in Sources */,
 				9953073125CB2E4B006AE71F /* Player.swift in Sources */,
 				995306AD25CB004F006AE71F /* TestingSwiftApp.swift in Sources */,
+				9959C48B25D1A108006507BE /* PurchaseProtocol.swift in Sources */,
 				9953070525CB0CD1006AE71F /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
