@@ -28,6 +28,8 @@
 		99531CF725CB59A30054AA05 /* PerformanceTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99531CF625CB59A30054AA05 /* PerformanceTesting.swift */; };
 		9953F65725CC5B2F00650505 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953F65625CC5B2F00650505 /* House.swift */; };
 		9953F65E25CC5C5800650505 /* CodeCoverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953F65D25CC5C5800650505 /* CodeCoverage.swift */; };
+		9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C45B25D193A4006507BE /* AnimalTableView.swift */; };
+		9959C46D25D19943006507BE /* TestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C46C25D19943006507BE /* TestDouble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		99531CF625CB59A30054AA05 /* PerformanceTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTesting.swift; sourceTree = "<group>"; };
 		9953F65625CC5B2F00650505 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		9953F65D25CC5C5800650505 /* CodeCoverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverage.swift; sourceTree = "<group>"; };
+		9959C45B25D193A4006507BE /* AnimalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableView.swift; sourceTree = "<group>"; };
+		9959C46C25D19943006507BE /* TestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDouble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 		995306AB25CB004F006AE71F /* TestingSwift */ = {
 			isa = PBXGroup;
 			children = (
+				9959C45A25D19392006507BE /* Stub */,
 				995306DA25CB07F0006AE71F /* Model */,
 				995306AC25CB004F006AE71F /* TestingSwiftApp.swift */,
 				995306AE25CB004F006AE71F /* ContentView.swift */,
@@ -172,6 +177,7 @@
 		995306BD25CB0050006AE71F /* TestingSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				9959C46125D19908006507BE /* TestDouble */,
 				9912432925D04F52009ECB70 /* MutationTesting */,
 				9953F65C25CC5C3E00650505 /* CodeCoverage */,
 				99531CF525CB59880054AA05 /* PerformanceTesting */,
@@ -263,6 +269,22 @@
 				9953F65D25CC5C5800650505 /* CodeCoverage.swift */,
 			);
 			path = CodeCoverage;
+			sourceTree = "<group>";
+		};
+		9959C45A25D19392006507BE /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				9959C45B25D193A4006507BE /* AnimalTableView.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		9959C46125D19908006507BE /* TestDouble */ = {
+			isa = PBXGroup;
+			children = (
+				9959C46C25D19943006507BE /* TestDouble.swift */,
+			);
+			path = TestDouble;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +448,7 @@
 			files = (
 				995306AF25CB004F006AE71F /* ContentView.swift in Sources */,
 				9912432425D04ED2009ECB70 /* Cake.swift in Sources */,
+				9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
 				9953F65725CC5B2F00650505 /* House.swift in Sources */,
 				9953071125CB0DA2006AE71F /* User.swift in Sources */,
@@ -440,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9959C46D25D19943006507BE /* TestDouble.swift in Sources */,
 				995306E525CB08A4006AE71F /* ConverterTests.swift in Sources */,
 				9953073825CB2E90006AE71F /* AssertArrayTest.swift in Sources */,
 				995306BF25CB0050006AE71F /* TestingSwiftTests.swift in Sources */,
