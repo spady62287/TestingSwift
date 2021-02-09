@@ -32,6 +32,9 @@
 		9959C46D25D19943006507BE /* TestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C46C25D19943006507BE /* TestDouble.swift */; };
 		9959C48125D19F5B006507BE /* PurchaseImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C48025D19F5B006507BE /* PurchaseImplementations.swift */; };
 		9959C48B25D1A108006507BE /* PurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C48A25D1A108006507BE /* PurchaseProtocol.swift */; };
+		99F6FC1E25D2E48A00DBD252 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6FC1D25D2E48A00DBD252 /* Tweet.swift */; };
+		99F6FC2825D2EB7600DBD252 /* MegaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6FC2725D2EB7600DBD252 /* MegaController.swift */; };
+		99F6FC2E25D2F51700DBD252 /* TweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6FC2D25D2F51700DBD252 /* TweetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		9959C46C25D19943006507BE /* TestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDouble.swift; sourceTree = "<group>"; };
 		9959C48025D19F5B006507BE /* PurchaseImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseImplementations.swift; sourceTree = "<group>"; };
 		9959C48A25D1A108006507BE /* PurchaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProtocol.swift; sourceTree = "<group>"; };
+		99F6FC1D25D2E48A00DBD252 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		99F6FC2725D2EB7600DBD252 /* MegaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaController.swift; sourceTree = "<group>"; };
+		99F6FC2D25D2F51700DBD252 /* TweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				9959C46C25D19943006507BE /* TestDouble.swift */,
+				99F6FC2D25D2F51700DBD252 /* TweetTests.swift */,
 			);
 			path = TestDouble;
 			sourceTree = "<group>";
@@ -295,6 +302,7 @@
 		9959C47E25D19EF6006507BE /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				99F6FC1C25D2E47200DBD252 /* ConstructorInjection */,
 				9959C47F25D19F06006507BE /* Interfaces */,
 			);
 			path = DependencyInjection;
@@ -307,6 +315,15 @@
 				9959C48A25D1A108006507BE /* PurchaseProtocol.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		99F6FC1C25D2E47200DBD252 /* ConstructorInjection */ = {
+			isa = PBXGroup;
+			children = (
+				99F6FC1D25D2E48A00DBD252 /* Tweet.swift */,
+				99F6FC2725D2EB7600DBD252 /* MegaController.swift */,
+			);
+			path = ConstructorInjection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,7 +490,9 @@
 				9959C48125D19F5B006507BE /* PurchaseImplementations.swift in Sources */,
 				9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
+				99F6FC1E25D2E48A00DBD252 /* Tweet.swift in Sources */,
 				9953F65725CC5B2F00650505 /* House.swift in Sources */,
+				99F6FC2825D2EB7600DBD252 /* MegaController.swift in Sources */,
 				9953071125CB0DA2006AE71F /* User.swift in Sources */,
 				9953070B25CB0D5A006AE71F /* PrimeCalculator.swift in Sources */,
 				9953073125CB2E4B006AE71F /* Player.swift in Sources */,
@@ -492,6 +511,7 @@
 				9953073825CB2E90006AE71F /* AssertArrayTest.swift in Sources */,
 				995306BF25CB0050006AE71F /* TestingSwiftTests.swift in Sources */,
 				99531CF725CB59A30054AA05 /* PerformanceTesting.swift in Sources */,
+				99F6FC2E25D2F51700DBD252 /* TweetTests.swift in Sources */,
 				99531CE425CB4F0E0054AA05 /* CustomAssertions.swift in Sources */,
 				9953F65E25CC5C5800650505 /* CodeCoverage.swift in Sources */,
 				9953071F25CB1085006AE71F /* ThrowingTests.swift in Sources */,
