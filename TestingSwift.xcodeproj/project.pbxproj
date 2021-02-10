@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9912432425D04ED2009ECB70 /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912432325D04ED2009ECB70 /* Cake.swift */; };
 		9912432B25D04F76009ECB70 /* MutationTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912432A25D04F76009ECB70 /* MutationTesting.swift */; };
+		992BB80A25D43725007AD375 /* InjectionClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992BB80925D43725007AD375 /* InjectionClosures.swift */; };
+		992BB81525D4405A007AD375 /* DependencyInjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992BB81425D4405A007AD375 /* DependencyInjectionTests.swift */; };
 		995306AD25CB004F006AE71F /* TestingSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306AC25CB004F006AE71F /* TestingSwiftApp.swift */; };
 		995306AF25CB004F006AE71F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306AE25CB004F006AE71F /* ContentView.swift */; };
 		995306B125CB0050006AE71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995306B025CB0050006AE71F /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 /* Begin PBXFileReference section */
 		9912432325D04ED2009ECB70 /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
 		9912432A25D04F76009ECB70 /* MutationTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutationTesting.swift; sourceTree = "<group>"; };
+		992BB80925D43725007AD375 /* InjectionClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionClosures.swift; sourceTree = "<group>"; };
+		992BB81425D4405A007AD375 /* DependencyInjectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionTests.swift; sourceTree = "<group>"; };
 		995306A925CB004F006AE71F /* TestingSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995306AC25CB004F006AE71F /* TestingSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSwiftApp.swift; sourceTree = "<group>"; };
 		995306AE25CB004F006AE71F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +144,22 @@
 			path = MutationTesting;
 			sourceTree = "<group>";
 		};
+		992BB80825D436FF007AD375 /* ClosureInjection */ = {
+			isa = PBXGroup;
+			children = (
+				992BB80925D43725007AD375 /* InjectionClosures.swift */,
+			);
+			path = ClosureInjection;
+			sourceTree = "<group>";
+		};
+		992BB81325D4403B007AD375 /* DependencyTests */ = {
+			isa = PBXGroup;
+			children = (
+				992BB81425D4405A007AD375 /* DependencyInjectionTests.swift */,
+			);
+			path = DependencyTests;
+			sourceTree = "<group>";
+		};
 		995306A025CB004F006AE71F = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +208,7 @@
 		995306BD25CB0050006AE71F /* TestingSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				992BB81325D4403B007AD375 /* DependencyTests */,
 				9959C46125D19908006507BE /* TestDouble */,
 				9912432925D04F52009ECB70 /* MutationTesting */,
 				9953F65C25CC5C3E00650505 /* CodeCoverage */,
@@ -302,6 +323,7 @@
 		9959C47E25D19EF6006507BE /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				992BB80825D436FF007AD375 /* ClosureInjection */,
 				99F6FC1C25D2E47200DBD252 /* ConstructorInjection */,
 				9959C47F25D19F06006507BE /* Interfaces */,
 			);
@@ -489,6 +511,7 @@
 				9912432425D04ED2009ECB70 /* Cake.swift in Sources */,
 				9959C48125D19F5B006507BE /* PurchaseImplementations.swift in Sources */,
 				9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */,
+				992BB80A25D43725007AD375 /* InjectionClosures.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
 				99F6FC1E25D2E48A00DBD252 /* Tweet.swift in Sources */,
 				9953F65725CC5B2F00650505 /* House.swift in Sources */,
@@ -516,6 +539,7 @@
 				9953F65E25CC5C5800650505 /* CodeCoverage.swift in Sources */,
 				9953071F25CB1085006AE71F /* ThrowingTests.swift in Sources */,
 				9912432B25D04F76009ECB70 /* MutationTesting.swift in Sources */,
+				992BB81525D4405A007AD375 /* DependencyInjectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
