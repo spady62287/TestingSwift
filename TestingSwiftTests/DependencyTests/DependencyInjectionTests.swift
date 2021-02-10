@@ -26,4 +26,27 @@ class DependencyInjectionTests: XCTestCase {
         XCTAssertEqual(storedMessage, "Message in TextField")
     }
     
+    func testAppUrlCount() {
+        // Given
+        var urlHandler = URLHandler()
+        
+        // When
+        let absoluteStringUrl = URL(string: "internal://ApplicationHomePage")!
+        urlHandler.open(url: absoluteStringUrl)
+        
+        // Then
+        XCTAssertTrue(urlHandler.appUrls.count == 1)
+    }
+    
+    func testUIApplicationUrlCount() {
+        // Given
+        var urlHandler = URLHandler()
+        
+        // When
+        urlHandler.open(url: URL(fileURLWithPath: "www.google.com"))
+        
+        // Then
+        XCTAssertTrue(urlHandler.uiApplicationUrls.count == 1)
+    }
+    
 }
