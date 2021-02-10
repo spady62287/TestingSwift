@@ -28,7 +28,9 @@ class TweetTests: XCTestCase {
         
         // When
         // Tweet Created at different Date is false
-        let testDouble = TweetCurrentDateStub()
+        var testDouble = TweetCurrentDateStub()
+        // Simulate Date being created at a different time
+        testDouble.date = Date(timeInterval: TimeInterval.init(20), since: currentDateTweet.date)
         
         // Then
         XCTAssertFalse(testDouble.date == currentDateTweet.date)
