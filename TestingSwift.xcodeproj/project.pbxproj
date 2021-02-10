@@ -11,6 +11,7 @@
 		9912432B25D04F76009ECB70 /* MutationTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912432A25D04F76009ECB70 /* MutationTesting.swift */; };
 		992BB80A25D43725007AD375 /* InjectionClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992BB80925D43725007AD375 /* InjectionClosures.swift */; };
 		992BB81525D4405A007AD375 /* DependencyInjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992BB81425D4405A007AD375 /* DependencyInjectionTests.swift */; };
+		992BB82725D451C9007AD375 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992BB82625D451C9007AD375 /* URLOpener.swift */; };
 		995306AD25CB004F006AE71F /* TestingSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306AC25CB004F006AE71F /* TestingSwiftApp.swift */; };
 		995306AF25CB004F006AE71F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995306AE25CB004F006AE71F /* ContentView.swift */; };
 		995306B125CB0050006AE71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995306B025CB0050006AE71F /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		9912432A25D04F76009ECB70 /* MutationTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutationTesting.swift; sourceTree = "<group>"; };
 		992BB80925D43725007AD375 /* InjectionClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionClosures.swift; sourceTree = "<group>"; };
 		992BB81425D4405A007AD375 /* DependencyInjectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionTests.swift; sourceTree = "<group>"; };
+		992BB82625D451C9007AD375 /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		995306A925CB004F006AE71F /* TestingSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995306AC25CB004F006AE71F /* TestingSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSwiftApp.swift; sourceTree = "<group>"; };
 		995306AE25CB004F006AE71F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				992BB80925D43725007AD375 /* InjectionClosures.swift */,
+				992BB82625D451C9007AD375 /* URLOpener.swift */,
 			);
 			path = ClosureInjection;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */,
 				992BB80A25D43725007AD375 /* InjectionClosures.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
+				992BB82725D451C9007AD375 /* URLOpener.swift in Sources */,
 				99F6FC1E25D2E48A00DBD252 /* Tweet.swift in Sources */,
 				9953F65725CC5B2F00650505 /* House.swift in Sources */,
 				99F6FC2825D2EB7600DBD252 /* MegaController.swift in Sources */,
