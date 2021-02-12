@@ -10,6 +10,7 @@ import XCTest
 
 class DependencyInjectionTests: XCTestCase {
     
+    // Integration Tests
     func testShareViewControllerDisplayStoredMessage() {
         // Given
         let shareViewController = ShareViewController()
