@@ -21,6 +21,12 @@ class StorePrecondition {
     
     var user: UserPrecondition?
     
+    // Add our own instance method called assert() that matches Swift's own assert(), calling straight through to Swift's version in production code but silently acting as a flight recorder while testing
+    
+    func assert(_ condition: @autoclosure () -> Bool, _ message: @autoclosure () -> String = String(), file: StaticString = #file, line: UInt = #line) {
+        Swift.assert(condition(), message(), file: file, line: line)
+    }
+    
     // Check whether we have a valid user set, and use assert()
     
     func buy(product: String) -> Bool {
