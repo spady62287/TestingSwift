@@ -131,6 +131,71 @@ class PartialMock: XCTestCase {
     
     // A Full Mock is where we wrap UIDevice in a protocol, then send in a complete replacement that conforms to the same protocol.
     
-    
+    func testFullMockUnpluggedBatteryPower() {
+        
+        // Add a mock type that implements the same protocol
 
+        struct DeviceMock: DeviceProtocol {
+            
+            var testBatteryState: UIDevice.BatteryState
+            
+            var batteryState: UIDevice.BatteryState {
+                return testBatteryState
+            }
+        }
+        
+        // Given
+        let sut = PowerMonitorProto(device: DeviceMock(testBatteryState: .unplugged))
+        
+        // When
+        let message = sut.getStatus()
+        
+        // Then
+        XCTAssertEqual(message, BatteryState.powerDown)
+    }
+    
+    func testFullMockUnknownBatteryPower() {
+        // Add a mock type that implements the same protocol
+
+        struct DeviceMock: DeviceProtocol {
+            
+            var testBatteryState: UIDevice.BatteryState
+            
+            var batteryState: UIDevice.BatteryState {
+                return testBatteryState
+            }
+        }
+        
+        // Given
+        let sut = PowerMonitorProto(device: DeviceMock(testBatteryState: .unknown))
+        
+        // When
+        let message = sut.getStatus()
+        
+        // Then
+        XCTAssertEqual(message, BatteryState.powerError)
+    }
+    
+    func testFullMockChargingBatteryPower() {
+        
+        // Add a mock type that implements the same protocol
+
+        struct DeviceMock: DeviceProtocol {
+            
+            var testBatteryState: UIDevice.BatteryState
+            
+            var batteryState: UIDevice.BatteryState {
+                return testBatteryState
+            }
+        }
+        
+        // Given
+        let sut = PowerMonitorProto(device: DeviceMock(testBatteryState: .charging))
+        
+        // When
+        let message = sut.getStatus()
+        
+        // Then
+        XCTAssertEqual(message, BatteryState.powerUp)
+    }
 }

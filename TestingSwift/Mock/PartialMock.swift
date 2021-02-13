@@ -33,3 +33,26 @@ struct PowerMonitor {
         }
     }
 }
+
+// A Full Mock is where we wrap UIDevice in a protocol
+
+// Send in a complete replacement that conforms to the same protocol
+
+protocol DeviceProtocol {
+    var batteryState: UIDevice.BatteryState { get }
+}
+
+struct PowerMonitorProto {
+    
+    var device: DeviceProtocol
+    
+    func getStatus() -> String {
+        if device.batteryState == .unplugged {
+            return BatteryState.powerDown
+        } else if device.batteryState == .unknown {
+            return BatteryState.powerError
+        } else {
+            return BatteryState.powerUp
+        }
+    }
+}
