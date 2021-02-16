@@ -62,9 +62,7 @@ class News {
             
             completionHandler()
         }
-        
-        completionHandler()
-        
+                
         task.resume()
     }
     

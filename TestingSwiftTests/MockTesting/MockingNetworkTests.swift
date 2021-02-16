@@ -25,6 +25,13 @@ class MockingNetworkTests: XCTestCase {
     // Dummy Tests: Doesn't do anything except satisfy the need for dataTask() to return something
     
     class DataTaskMock: URLSessionDataTask {
+        
+        var completionHandler: (Data?, URLResponse?, Error?) -> Void
+        
+        init(completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+            self.completionHandler = completionHandler
+        }
+        
         override func resume() { }
     }
     
@@ -35,11 +42,13 @@ class MockingNetworkTests: XCTestCase {
         var lastUrl: URL?
         
         func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+            // mocked networking code will be "completed" before we've even called resume()
+            defer { completionHandler(nil, nil, nil) }
             lastUrl = url
-            return DataTaskMock()
+            return DataTaskMock(completionHandler: completionHandler)
         }
     }
-    
+        
     func testNewsFetchLoadsCorrectURL() {
         
         // Given
@@ -55,10 +64,59 @@ class MockingNetworkTests: XCTestCase {
         }
         
         // Then
-        wait(for: [expectation], timeout: 10)
+        wait(for: [expectation], timeout: 5)
     }
     
     // 2. Was a network request actually started?
+    
+    // Use this Mock to track when resume was called
+    
+    class DataTaskMockTwo: URLSessionDataTask {
+        
+        var completionHandler: (Data?, URLResponse?, Error?) -> Void
+        var resumeWasCalled = false
+        
+        init(completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+            self.completionHandler = completionHandler
+        }
+        
+        override func resume() {
+            // resume was called, so flip boolean and call the completion
+            resumeWasCalled = true
+            completionHandler(nil, nil, nil)
+        }
+    }
+    
+    // Return new Mocked DataTask
+    
+    class URLSessionMockTwo: URLSessionProtocol {
+        
+        var dataTask: DataTaskMockTwo?
+        
+        func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+            let newDataTask = DataTaskMockTwo(completionHandler: completionHandler)
+            dataTask = newDataTask
+            return newDataTask
+        }
+    }
+    
+    func testNewsFetchCallsResume() {
+        
+        // Given
+        let url = URL(string: "https://www.apple.com/newsroom/rss-feed.rss")!
+        let news = News(url: url)
+        let session = URLSessionMockTwo()
+        let expectation = XCTestExpectation(description: "Downloading news stories triggers resume().")
+        
+        // When
+        news.fetch(using: session) {
+            XCTAssertTrue(session.dataTask?.resumeWasCalled ?? false)
+            expectation.fulfill()
+        }
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+    }
     
     // 3. Did the requestcome back with certain data?
     
