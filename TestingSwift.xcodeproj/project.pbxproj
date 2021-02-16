@@ -35,6 +35,8 @@
 		9959C46D25D19943006507BE /* TestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C46C25D19943006507BE /* TestDouble.swift */; };
 		9959C48125D19F5B006507BE /* PurchaseImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C48025D19F5B006507BE /* PurchaseImplementations.swift */; };
 		9959C48B25D1A108006507BE /* PurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C48A25D1A108006507BE /* PurchaseProtocol.swift */; };
+		995F508925DAECD100AE2384 /* MockingNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F508825DAECD100AE2384 /* MockingNetwork.swift */; };
+		995F508F25DAF3BC00AE2384 /* MockingNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F508E25DAF3BC00AE2384 /* MockingNetworkTests.swift */; };
 		997CF49A25D6D251004B377A /* DependencyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CF49925D6D251004B377A /* DependencyStruct.swift */; };
 		997CF4A525D6DD45004B377A /* Mocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CF4A425D6DD45004B377A /* Mocking.swift */; };
 		997CF4B025D6DE4A004B377A /* MockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CF4AF25D6DE4A004B377A /* MockTests.swift */; };
@@ -108,6 +110,8 @@
 		9959C46C25D19943006507BE /* TestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDouble.swift; sourceTree = "<group>"; };
 		9959C48025D19F5B006507BE /* PurchaseImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseImplementations.swift; sourceTree = "<group>"; };
 		9959C48A25D1A108006507BE /* PurchaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProtocol.swift; sourceTree = "<group>"; };
+		995F508825DAECD100AE2384 /* MockingNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingNetwork.swift; sourceTree = "<group>"; };
+		995F508E25DAF3BC00AE2384 /* MockingNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingNetworkTests.swift; sourceTree = "<group>"; };
 		997CF49925D6D251004B377A /* DependencyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyStruct.swift; sourceTree = "<group>"; };
 		997CF4A425D6DD45004B377A /* Mocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocking.swift; sourceTree = "<group>"; };
 		997CF4AF25D6DE4A004B377A /* MockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTests.swift; sourceTree = "<group>"; };
@@ -374,6 +378,7 @@
 			children = (
 				997CF4A425D6DD45004B377A /* Mocking.swift */,
 				997CF4C125D6F22A004B377A /* PartialMock.swift */,
+				995F508825DAECD100AE2384 /* MockingNetwork.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 			children = (
 				997CF4AF25D6DE4A004B377A /* MockTests.swift */,
 				997CF4C725D6F48F004B377A /* PartialMock.swift */,
+				995F508E25DAF3BC00AE2384 /* MockingNetworkTests.swift */,
 			);
 			path = MockTesting;
 			sourceTree = "<group>";
@@ -579,6 +585,7 @@
 				992BB80A25D43725007AD375 /* InjectionClosures.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
 				99A3EFEA25D839D2007A60DC /* Preconditions.swift in Sources */,
+				995F508925DAECD100AE2384 /* MockingNetwork.swift in Sources */,
 				992BB82725D451C9007AD375 /* URLOpener.swift in Sources */,
 				99F6FC1E25D2E48A00DBD252 /* Tweet.swift in Sources */,
 				9953F65725CC5B2F00650505 /* House.swift in Sources */,
@@ -602,6 +609,7 @@
 				99A3EFF525D83FDF007A60DC /* Preconditions.swift in Sources */,
 				995306E525CB08A4006AE71F /* ConverterTests.swift in Sources */,
 				9953073825CB2E90006AE71F /* AssertArrayTest.swift in Sources */,
+				995F508F25DAF3BC00AE2384 /* MockingNetworkTests.swift in Sources */,
 				995306BF25CB0050006AE71F /* TestingSwiftTests.swift in Sources */,
 				99531CF725CB59A30054AA05 /* PerformanceTesting.swift in Sources */,
 				99F6FC2E25D2F51700DBD252 /* TweetTests.swift in Sources */,
