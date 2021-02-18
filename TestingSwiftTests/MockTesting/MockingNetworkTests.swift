@@ -120,6 +120,44 @@ class MockingNetworkTests: XCTestCase {
     
     // 3. Did the requestcome back with certain data?
     
+    // Customizable stub
+    
+    // Defer to call completion handler with pre-set data
+    
+    // DataTaskMock is a Dummy Mock
+    
+    class URLSessionMockThree: URLSessionProtocol {
+        
+        var testData: Data?
+        
+        func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+            defer {
+                completionHandler(testData, nil, nil)
+            }
+            
+            return DataTaskMock(completionHandler: completionHandler)
+        }
+    }
+        
+    func testNewsStoriesAreFetched() {
+        
+        // Given
+        let url = URL(string: "https://www.apple.com/newsroom/rss-feed.rss")!
+        let news = News(url: url)
+        let session = URLSessionMockThree()
+        session.testData = Data("Hello, world!".utf8)
+        let expectation = XCTestExpectation(description: "Downloading news stories triggers resume().")
+        
+        // When
+        news.fetch(using: session) {
+            XCTAssertEqual(news.stories, "Hello, world!")
+            expectation.fulfill()
+        }
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+    }
+        
     // 4. Did the request come back with a specific error
     
     
