@@ -160,5 +160,42 @@ class MockingNetworkTests: XCTestCase {
         
     // 4. Did the request come back with a specific error
     
+    // Partial Mock that sends Error
     
+    class URLSessionMockFour: URLSessionProtocol {
+        
+        var testError: Error?
+        
+        func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+            defer {
+                completionHandler(nil, nil, testError)
+            }
+            
+            return DataTaskMock(completionHandler: completionHandler)
+        }
+    }
+    
+    enum MyError: Error {
+        case someExpectedError
+        case someUnexpectedError
+    }
+    
+    func testNewsStoriesHandlesError() {
+        
+        // Given
+        let url = URL(string: "https://www.apple.com/newsroom/rss-feed.rss")!
+        let news = News(url: url)
+        let session = URLSessionMockFour()
+        session.testError = MyError.someExpectedError
+        let expectation = XCTestExpectation(description: "Error Downloading stories")
+        
+        // When
+        news.fetch(using: session) {
+            XCTAssertNotNil(session.testError)
+            expectation.fulfill()
+        }
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+    }
 }
