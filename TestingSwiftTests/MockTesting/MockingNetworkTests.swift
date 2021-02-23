@@ -260,4 +260,58 @@ class MockingNetworkTests: XCTestCase {
         // Then
         wait(for: [expectation], timeout: 5)
     }
+    
+    // Mocking Many Requests
+    
+    // Refactor Static Property on URLProtocolMock
+    
+    // Change static instance to a dictionary that maps URLS to data, then register any URL and provide it the data to return
+    
+    class URLProtocolMockTwo: URLProtocol {
+        // Send this data back
+        static var testURLS = [URL: Data]()
+        
+        override class func canInit(with request: URLRequest) -> Bool {
+            return true
+        }
+        
+        override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+            return request
+        }
+        
+        // On StartLoading send back test Data or an empty instance
+        override func startLoading() {
+            if let url = request.url {
+                if let data = URLProtocolMockTwo.testURLS[url] {
+                    self.client?.urlProtocol(self, didLoad: data)
+                }
+            }
+            
+            self.client?.urlProtocolDidFinishLoading(self)
+        }
+        
+        override func stopLoading() { }
+    }
+    
+    func testNewsStoriesAreFetchedRegisterURL() {
+                
+        // Given
+        let url = URL(string: "https://www.apple.com/newsroom/rss-feed.rss")!
+        let news = News(url: url)
+        let expectation = XCTestExpectation(description: "Downloading news stories triggers resume().")
+        URLProtocolMockTwo.testURLS = [url: Data("Hello, world!".utf8)]
+
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [URLProtocolMockTwo.self]
+        let session = URLSession(configuration: config)
+        
+        // When
+        news.fetch(using: session) {
+            XCTAssertEqual(news.stories, "Hello, world!")
+            expectation.fulfill()
+        }
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+    }
 }
