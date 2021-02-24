@@ -46,6 +46,8 @@
 		99A3EFF525D83FDF007A60DC /* Preconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3EFF425D83FDF007A60DC /* Preconditions.swift */; };
 		99B3013325E69403008CB1CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B3013225E69403008CB1CE /* Main.storyboard */; };
 		99B3013A25E6989C008CB1CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B3013925E6989C008CB1CE /* MainViewController.swift */; };
+		99B3019825E6A1C4008CB1CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B3019725E6A1C4008CB1CE /* SceneDelegate.swift */; };
+		99B301BC25E6A3FB008CB1CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B301BB25E6A3FB008CB1CE /* AppDelegate.swift */; };
 		99F6FC1E25D2E48A00DBD252 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6FC1D25D2E48A00DBD252 /* Tweet.swift */; };
 		99F6FC2825D2EB7600DBD252 /* MegaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6FC2725D2EB7600DBD252 /* MegaController.swift */; };
 		99F6FC2E25D2F51700DBD252 /* TweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6FC2D25D2F51700DBD252 /* TweetTests.swift */; };
@@ -123,6 +125,8 @@
 		99A3EFF425D83FDF007A60DC /* Preconditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preconditions.swift; sourceTree = "<group>"; };
 		99B3013225E69403008CB1CE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		99B3013925E6989C008CB1CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		99B3019725E6A1C4008CB1CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		99B301BB25E6A3FB008CB1CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F6FC1D25D2E48A00DBD252 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		99F6FC2725D2EB7600DBD252 /* MegaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaController.swift; sourceTree = "<group>"; };
 		99F6FC2D25D2F51700DBD252 /* TweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTests.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		995306AB25CB004F006AE71F /* TestingSwift */ = {
 			isa = PBXGroup;
 			children = (
+				99B301BB25E6A3FB008CB1CE /* AppDelegate.swift */,
+				99B3019725E6A1C4008CB1CE /* SceneDelegate.swift */,
 				99B3013825E6987E008CB1CE /* Controllers */,
 				99B3012F25E693B3008CB1CE /* Views */,
 				99A3EFE825D839B8007A60DC /* Preconditions */,
@@ -616,12 +622,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B301BC25E6A3FB008CB1CE /* AppDelegate.swift in Sources */,
 				995306AF25CB004F006AE71F /* ContentView.swift in Sources */,
 				99B3013A25E6989C008CB1CE /* MainViewController.swift in Sources */,
 				9912432425D04ED2009ECB70 /* Cake.swift in Sources */,
 				9959C48125D19F5B006507BE /* PurchaseImplementations.swift in Sources */,
 				9959C45C25D193A4006507BE /* AnimalTableView.swift in Sources */,
 				997CF4A525D6DD45004B377A /* Mocking.swift in Sources */,
+				99B3019825E6A1C4008CB1CE /* SceneDelegate.swift in Sources */,
 				992BB80A25D43725007AD375 /* InjectionClosures.swift in Sources */,
 				995306DC25CB080D006AE71F /* Converter.swift in Sources */,
 				99A3EFEA25D839D2007A60DC /* Preconditions.swift in Sources */,
