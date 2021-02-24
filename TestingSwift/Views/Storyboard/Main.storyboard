@@ -17,34 +17,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k0A-ij-phv">
-                                <rect key="frame" x="20" y="108" width="374" height="304"/>
+                                <rect key="frame" x="20" y="108" width="374" height="286"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RRj-4S-0ye">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="textDidChange:" destination="kNg-eI-O8x" eventType="valueChanged" id="hbN-DU-UkS"/>
+                                            <action selector="textChanged:" destination="kNg-eI-O8x" eventType="editingChanged" id="h6q-BL-ZJH"/>
                                             <outlet property="delegate" destination="kNg-eI-O8x" id="ahe-17-O7P"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptf-Hr-Cvz">
-                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptf-Hr-Cvz">
+                                        <rect key="frame" x="0.0" y="51" width="374" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bl2-Xz-wkB">
-                                        <rect key="frame" x="-2" y="108" width="378" height="35"/>
+                                        <rect key="frame" x="-2" y="102" width="378" height="32"/>
                                         <connections>
                                             <action selector="sliderDragged:" destination="kNg-eI-O8x" eventType="valueChanged" id="nZ4-1O-vI8"/>
                                         </connections>
                                     </slider>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CDE-hc-MM5">
-                                        <rect key="frame" x="0.0" y="162" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="153" width="374" height="31"/>
                                     </progressView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-S9-koG">
-                                        <rect key="frame" x="0.0" y="216" width="374" height="35"/>
+                                        <rect key="frame" x="0.0" y="204" width="374" height="32"/>
                                         <segments>
                                             <segment title="First"/>
                                             <segment title="Second"/>
@@ -54,10 +54,10 @@
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EmU-6h-dEp">
-                                        <rect key="frame" x="0.0" y="270" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="255" width="374" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4H-wL-Q8H">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="31"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                                 <state key="normal" title="Red">
@@ -68,20 +68,26 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="but-wc-Uzw">
-                                                <rect key="frame" x="124.5" y="0.0" width="125" height="34"/>
+                                                <rect key="frame" x="124.5" y="0.0" width="125" height="31"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                                 <state key="normal" title="Green">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="colorSelected:" destination="kNg-eI-O8x" eventType="touchUpInside" id="mie-0G-xQf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR8-qx-g70">
-                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="34"/>
+                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="31"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                                 <state key="normal" title="Blue">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="colorSelected:" destination="kNg-eI-O8x" eventType="touchUpInside" id="l5h-tz-WJi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

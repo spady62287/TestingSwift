@@ -14,12 +14,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var progress: UIProgressView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
-    
-    
-    @IBAction func textDidChange(_ sender: UITextField) {
+        
+    @IBAction func textChanged(_ sender: UITextField) {
         label.text = textField.text
     }
-    
     
     @IBAction func sliderDragged(_ sender: UISlider) {
         progress.progress = 1 - slider.value
@@ -28,7 +26,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         title = segmentControl.titleForSegment(at: segmentControl.selectedSegmentIndex)
     }
-    
     
     @IBAction func colorSelected(_ sender: UIButton) {
         let alert = UIAlertController(title: sender.titleLabel?.text, message: nil, preferredStyle: .alert)
