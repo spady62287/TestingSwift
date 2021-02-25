@@ -29,8 +29,8 @@ class AssertArrayTest: XCTestCase {
         let computer2 = Player(nation: "Vikings")
         
         // When
-        humanPlayer.declareWar(on: computer1)
-        humanPlayer.declareWar(on: computer2)
+        humanPlayer.declareWar(target: computer1)
+        humanPlayer.declareWar(target: computer2)
         
         // Then
         // Purposely Change the order of the Array to create a failure
