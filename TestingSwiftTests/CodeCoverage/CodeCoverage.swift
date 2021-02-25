@@ -21,7 +21,7 @@ class CodeCoverage: XCTestCase {
         let suitability = house.checkSuitabillity(desiredBedrooms: desiredBedrooms, desiredBathrooms: desiredBathrooms)
         
         // Then
-        //XCTAssertTrue(suitability)
+        // XCTAssertTrue(suitability)
         XCTAssertFalse(suitability)
     }
     

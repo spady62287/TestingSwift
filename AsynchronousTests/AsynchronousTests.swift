@@ -44,7 +44,7 @@ class AsynchronousTests: XCTestCase {
         expectation.expectedFulfillmentCount = 25
         
         // When
-        PrimeCalculator.calculateStreaming(upTo: maximumCount) { number in
+        PrimeCalculator.calculateStreaming(upTo: maximumCount) { _ in
             expectation.fulfill()
         }
         
@@ -128,4 +128,3 @@ class AsynchronousTests: XCTestCase {
         wait(for: [expectation], timeout: 3)
     }
 }
-

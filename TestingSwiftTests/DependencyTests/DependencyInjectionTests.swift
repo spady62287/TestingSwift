@@ -17,7 +17,7 @@ class DependencyInjectionTests: XCTestCase {
         
         // When
         shareViewController.loadView()
-        let shareView = shareViewController.view as! ShareView
+        let shareView: ShareView = shareViewController.view as! ShareView
         shareView.textField.text = "Message in TextField"
         // Simulate Button Tap
         shareView.shareTapped()

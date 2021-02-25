@@ -44,7 +44,7 @@ struct PrimeCalculator {
             
             // Collapse our results down to a single array of primes
             
-            let primes = sieve.enumerated().compactMap( { $1 == true ? $0 : nil } )
+            let primes = sieve.enumerated().compactMap({ $1 == true ? $0 : nil })
             
             completion(primes)
         }
@@ -78,7 +78,6 @@ struct PrimeCalculator {
     
     // Testing progress is done with a specific XCTestExpectation subclass called XCTestExpectation subclass called XCTNSPredicateExpectation, which lets you specify a custom test using string syntax. In our code we're going to check that the completedUnitCount of our Progress object is equal to 100, which means our expectation will automatically be fulfilled as soon as that becomes true:
     
-    
     static func calculateWithProgress(upTo max: Int, completion: @escaping ([Int]) -> Void) -> Progress {
         
         // Create a Progress object that counts up to our maximum number
@@ -110,7 +109,7 @@ struct PrimeCalculator {
                 }
             }
             
-            let primes = sieve.enumerated().compactMap( { $1 == true ? $0 : nil } )
+            let primes = sieve.enumerated().compactMap({ $1 == true ? $0 : nil })
             
             completion(primes)
         }
@@ -137,7 +136,7 @@ struct PrimeCalculator {
             }
         }
         
-        let primes = sieve.enumerated().compactMap( { $1 == true ? $0 : nil } )
+        let primes = sieve.enumerated().compactMap({ $1 == true ? $0 : nil })
         
         return primes
     }

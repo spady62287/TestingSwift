@@ -12,11 +12,11 @@ struct GameConfirmMessage {
 }
 
 enum GameTitles: String {
-    case BioBlitz
-    case Blastaap
-    case DeadStormRising = "Dead Storm Rising"
-    case ExplodingAnimals = "Exploding Animals"
-    case CrashyPlane = "Crashy Plane"
+    case bioBlitz
+    case blastaap
+    case deadStormRising = "Dead Storm Rising"
+    case explodingAnimals = "Exploding Animals"
+    case crashyPlane = "Crashy Plane"
 }
 
 enum GameError: LocalizedError {
@@ -29,11 +29,11 @@ struct Game {
     let name: String
     
     func play() throws {
-        if name == GameTitles.BioBlitz.rawValue {
+        if name == GameTitles.bioBlitz.rawValue {
             throw GameError.notPurchased
-        } else if name == GameTitles.Blastaap.rawValue {
+        } else if name == GameTitles.blastaap.rawValue {
             throw GameError.notInstalled
-        } else if name == GameTitles.DeadStormRising.rawValue {
+        } else if name == GameTitles.deadStormRising.rawValue {
             throw GameError.parentalControlsDisallowed
         } else {
             print("\(name) \(GameConfirmMessage.play)")
