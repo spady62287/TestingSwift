@@ -18,10 +18,10 @@ class MegaController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Example of Bad Code
     // View Controllers should be small and composable
     var tableDataSource: UITableViewDataSource
-    var tableDelegate: UITableViewDelegate
+    weak var tableDelegate: UITableViewDelegate?
     var pickerDataSource: UIPickerViewDataSource
-    var pickerDelegate: UIPickerViewDelegate
-    var downloadDelegate: URLSessionDownloadDelegate
+    weak var pickerDelegate: UIPickerViewDelegate?
+    weak var downloadDelegate: URLSessionDownloadDelegate?
     
     init(tableDataSource: UITableViewDataSource, tableDelegate: UITableViewDelegate, pickerDataSource: UIPickerViewDataSource, pickerDelegate: UIPickerViewDelegate, downloadDelegate: URLSessionDownloadDelegate) {
         self.tableDataSource = tableDataSource
@@ -44,7 +44,7 @@ class MegaController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
+        let cell: UITableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
 
         cell.textLabel?.text = cookies[indexPath.row]
 

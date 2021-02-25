@@ -12,7 +12,7 @@ struct Converter {
         let fahrenheit = Measurement(value: fahrenheit, unit: UnitTemperature.fahrenheit)
         let celsius = fahrenheit.converted(to: .celsius)
         return celsius.value
-        //return (fahrenheit - 32) * 5 / 9
+        // return (fahrenheit - 32) * 5 / 9
     }
     
     // Method that returns a tuple

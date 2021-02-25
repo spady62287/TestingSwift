@@ -7,7 +7,6 @@
 
 import XCTest
 
-import XCTest
 @testable import TestingSwift
 
 class ConverterTests: XCTestCase {

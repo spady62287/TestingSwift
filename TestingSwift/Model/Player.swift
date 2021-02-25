@@ -16,8 +16,8 @@ struct Player: Equatable {
         cities.append(name)
     }
     
-    mutating func declareWar(on: Player) {
-        enemies.append(on)
+    mutating func declareWar(target: Player) {
+        enemies.append(target)
     }
 }
 

@@ -47,8 +47,8 @@ class Runner {
             preconditionFailure()
         }
 
-        if let _returnValue = returnValue {
-            return _returnValue
+        if let retValue = returnValue {
+            return retValue
         } else {
             return ""
         }
@@ -72,10 +72,10 @@ class Runner {
         let runLoop = RunLoop.current
         let timeoutDate = Date(timeInterval: TimeInterval(timeout), since: Date())
         var fulfilled: Bool = false
-        let _expression = memoizedClosure(expression)
+        let exp = memoizedClosure(expression)
         repeat {
             do {
-                let exp = try _expression(true)
+                let exp = try exp(true)
                 fulfilled = predicate(exp)
             } catch {
                 fatalError("Error raised \(error.localizedDescription)")

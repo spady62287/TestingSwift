@@ -1,0 +1,31 @@
+disabled_rules:
+- trailing_whitespace
+- force_cast
+- force_try
+- file_length
+- line_length
+- for_where
+- unused_optional_binding
+- function_parameter_count
+- nesting
+- identifier_name
+- empty_string
+- todo
+- inclusive_language
+opt_in_rules:
+- empty_count
+- empty_string
+excluded:
+- Carthage
+- Pods
+- SwiftLint/Common/3rdPartyLib
+function_body_length:
+    warning: 300
+    error: 500
+type_body_length:
+    warning: 300
+    error: 500
+cyclomatic_complexity:
+    warning: 15
+    error: 25
+reporter: "xcode"

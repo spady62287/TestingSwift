@@ -20,7 +20,7 @@ class News {
     // Testing the below class requires we remove the dependency of URLSession.shared
 
     func fetchWithURLSessionDependency(completionHandler: @escaping () -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             
             if let data = data {
                 self.stories = String(decoding: data, as: UTF8.self)
@@ -37,7 +37,7 @@ class News {
     
     func fetchWithDependencyInjection(using session: URLSession = .shared, completionHandler: @escaping () -> Void) {
         
-        let task = session.dataTask(with: url) { data, response, error in
+        let task = session.dataTask(with: url) { data, _, _ in
             
             if let data = data {
                 self.stories = String(decoding: data, as: UTF8.self)
@@ -54,7 +54,7 @@ class News {
     
     func fetch(using session: URLSessionProtocol = URLSession.shared, completionHandler: @escaping () -> Void ) {
         
-        let task = session.dataTask(with: url) { (data, response, error) in
+        let task = session.dataTask(with: url) { (data, _, _) in
             
             if let data = data {
                 self.stories = String(decoding: data, as: UTF8.self)

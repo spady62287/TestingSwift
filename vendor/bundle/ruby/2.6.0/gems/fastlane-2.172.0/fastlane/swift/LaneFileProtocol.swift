@@ -51,8 +51,8 @@ open class LaneFile: NSObject, LaneFileProtocol {
             // that we'd normally expect.
             let methodList = class_copyMethodList(type(of: fastfileInstance!), &methodCount)
         #endif
-        for i in 0 ..< Int(methodCount) {
-            let selName = sel_getName(method_getName(methodList![i]))
+        for index in 0 ..< Int(methodCount) {
+            let selName = sel_getName(method_getName(methodList![index]))
             let name = String(cString: selName)
             let lowercasedName = name.lowercased()
             if lowercasedName.hasSuffix("lane") || lowercasedName.hasSuffix("lanewithoptions:") {
