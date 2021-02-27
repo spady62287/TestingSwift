@@ -5,3 +5,6 @@ Following "Testing Swift" tutorials written by Paul Hudson.
 Practicing Unit Testing, Integration Testing, and UI Tests.
 
 Also using Ruby for CI
+
+- Xcode 12
+- Swift 5
